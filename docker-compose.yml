@@ -25,14 +25,14 @@ services:
       - EXECUTOR=Local
       - FERNET_KEY=jsDPRErfv8Z_eVTnGfF8ywd19j4pyqE3NpdUBA_oRTo=
     volumes:
-      - ./examples/intro-example/dags:/usr/local/airflow/dags
+      - ./examples/intro-example/dags:/Users/zhaochensheng/Documents/develop/airflow-tutorial/airflow/dags
       # Uncomment to include custom plugins
-      # - ./plugins:/usr/local/airflow/plugins
+      # - ./plugins:/Users/zhaochensheng/Documents/develop/airflow-tutorial/airflow/plugins
     ports:
       - "8080:8080"
     command: webserver
     healthcheck:
-      test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
+      test: ["CMD-SHELL", "[ -f /Users/zhaochensheng/Documents/develop/airflow-tutorial/airflow/airflow-webserver.pid ]"]
       interval: 30s
       timeout: 30s
       retries: 3
